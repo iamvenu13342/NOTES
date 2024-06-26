@@ -1,5 +1,7 @@
 <H1>DevOps MAIN TOPICS</H1>
 
+DevOps is a collaborative approach that combines software development (Dev) and IT operations (Ops) to improve the efficiency, speed, and quality of delivering software through continuous integration & continuous delivery, and automated infrastructure management,
+
 ### Core Concepts and Practices
 
 1. **DevOps Principles**:
