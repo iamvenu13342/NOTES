@@ -2,7 +2,8 @@
   involves looking at various services and offerings across different categories. 
   Here's a detailed comparison:
 
-### 1. Compute Services:
+### 1. Compute Services: 
+         Each platform provides virtual machines and container orchestration solutions.
 - **AWS**:
   - **EC2 (Elastic Compute Cloud)**: Virtual servers for compute capacity.
   - **AWS Lambda**: Serverless compute service for running code without provisioning or managing servers.
@@ -123,7 +124,7 @@
 
 ### Notes:
 
-- **Compute Services**: Each platform provides virtual machines and container orchestration solutions (AWS with ECS, Azure with AKS, GCP with GKE).
+- **Compute Services**: (AWS with ECS, Azure with AKS, GCP with GKE).
 
 - **Storage Services**: All offer scalable object storage (S3, Blob Storage, Cloud Storage) and block storage solutions (EBS, Disk Storage, Persistent Disk).
 
