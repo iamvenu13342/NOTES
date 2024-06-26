@@ -18,23 +18,3 @@
 
 7. **Scalability and Reliability**: Designing systems that are scalable and reliable, ensuring continuous availability and performance.
 
-## Continuous Integration (CI) and Continuous Deployment (CD)
-
-### Continuous Integration (CI):
-
-Continuous Integration is a development practice where developers integrate code into a shared repository several times a day. Each integration is verified by an automated build and automated tests to detect integration errors as quickly as possible.
-
-- **Key Practices in CI**:
-  - **Frequent Commits**: Developers commit code frequently to the main branch.
-  - **Automated Builds**: Automated systems compile and build the application whenever new code is committed.
-  - **Automated Testing**: Running automated tests on each build to catch bugs early.
-
-### Continuous Deployment (CD):
-
-Continuous Deployment is the practice of automatically deploying every change that passes the automated tests to production. It is an extension of continuous integration, focusing on deploying code seamlessly and frequently.
-
-- **Key Practices in CD**:
-  - **Automated Deployments**: Automatically deploy successful builds to production environments.
-  - **Monitoring and Rollback**: Continuous monitoring of deployed applications and automated rollback mechanisms in case of failures.
-  - **Infrastructure as Code (IaC)**: Ensuring that the deployment process is repeatable and reliable.
-
