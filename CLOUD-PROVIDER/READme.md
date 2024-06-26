@@ -3,7 +3,7 @@
   Here's a detailed comparison:
 
 ### 1. Compute Services: 
-         Each platform provides virtual machines and container orchestration solutions.
+Each platform provides virtual machines and container orchestration solutions.
 - **AWS**:
   - **EC2 (Elastic Compute Cloud)**: Virtual servers for compute capacity.
   - **AWS Lambda**: Serverless compute service for running code without provisioning or managing servers.
