@@ -35,4 +35,4 @@ Infrastructure as Code (IaC) is a key DevOps practice that involves managing and
 By embracing the principles of DevOps, CI/CD practices, and IaC, organizations can achieve higher efficiency, faster delivery times, improved quality, and better alignment between development and operations teams.
 
 
-<H1>Version Control Systems</H1>
+
