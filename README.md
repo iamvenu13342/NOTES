@@ -8,65 +8,65 @@ DevOps is a collaborative approach that combines software development (Dev) and 
 
    - Understanding the culture and practices of DevOps.
 
-   - Continuous Integration (CI) and Continuous Deployment (CD).
+   - **Continuous Integration (CI)** and **Continuous Deployment (CD).**
 
-    - Infrastructure as Code (IaC).
+    - **Infrastructure as Code (IaC)**.
 
 2. **Version Control Systems**:
 
-    - Git and Git workflows (e.g., GitFlow, GitHub Flow).
+    - **Git** and **Git workflows** (e.g., GitFlow, GitHub Flow).
 
    - Branching and merging strategies.
 
 3. **Continuous Integration/Continuous Deployment (CI/CD)**:
 
-   - Tools: Jenkins, GitLab CI, CircleCI, Travis CI.
+   - Tools: **Jenkins**, GitLab CI, CircleCI, Travis CI.
 
    - Pipelines and automation.
 
 4. **Configuration Management**:
 
-    - Tools: Ansible, Puppet, Chef.
+    - Tools: **Ansible**, Puppet, Chef.
 
-    - Managing infrastructure and deployments.
+    - **Managing infrastructure and deployments.**
 
 5. **Containerization and Orchestration**:
 
-    - Docker: Container fundamentals, Dockerfiles, Docker Compose.
+    - **Docker**: Container fundamentals, Dockerfiles, Docker Compose.
 
-    - Kubernetes: Pods, Services, Deployments, ConfigMaps, Helm charts.
+    - **Kubernetes**: Pods, Services, Deployments, ConfigMaps, Helm charts.
 
 ### Tools and Technologies
 
 1. **Cloud Platforms**:
 
-   - AWS, Azure, Google Cloud Platform (GCP).
+   - **AWS**, Azure, Google Cloud Platform (GCP).
 
-    - Services: EC2, S3, Lambda, RDS, IAM.
+    - Services: **EC2, S3, Lambda, RDS, IAM.**
 
 2. **Infrastructure as Code (IaC)**:
 
-   - Tools: Terraform, CloudFormation.
+   - Tools: **Terraform**, CloudFormation.
 
     - Writing and managing infrastructure as code.
 
 3. **Monitoring and Logging**:
 
-   - Tools: Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana), Splunk.
+   - Tools: **Prometheus**, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana), Splunk.
 
    - Setting up alerts, metrics, and dashboards.
 
 4. **Networking and Security**:
 
-    - Basic networking concepts (DNS, HTTP/HTTPS, TCP/IP).
+    - Basic networking concepts **(DNS, HTTP/HTTPS, TCP/IP)**.
 
-    - Security best practices (SSH, SSL/TLS, VPN, firewalls).
+    - Security best practices **(SSH, SSL/TLS, VPN, firewalls)**.
 
     - Identity and Access Management (IAM).
 
 5. **Scripting and Automation**:
 
-    - Scripting languages: Bash, Python, PowerShell.
+    - Scripting languages: Bash, **Python**, PowerShell.
 
     - Automation of repetitive tasks and workflows.
 
