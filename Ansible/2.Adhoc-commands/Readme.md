@@ -1,4 +1,4 @@
-### Day 2: Ansible Adhoc Commands
+<h1> Ansible Adhoc Commands</h1>
 
 - Ansible adhoc commands are used to perform quick, one-off tasks on remote machines.
 - These commands do not require a playbook and are useful for rapid system management.
