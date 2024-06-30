@@ -5,7 +5,10 @@
 
 #### Overview of Ansible:
 - **What is Ansible?**
-  - Ansible is an open-source automation tool used for configuration management, application deployment, and task automation.
+  - Ansible is an open-source automation tool used for
+    **configuration management,
+    application deployment, and
+    task automation.**
 - **Advantages:**
   - Agentless architecture.
   - Uses SSH for communication.
