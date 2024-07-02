@@ -1,372 +1,135 @@
-<h1>comprehensive overview of your Ansible course:</h1>
+ <h1>Terraform</h1>
 
+## Day 1: Getting Started with Terraform
 
-### Day 1: Introduction to Ansible and Getting Started
+#### Introduction to Terraform and IaC
 
-#### Overview of Ansible:
-- **What is Ansible?**
-  - Ansible is an open-source automation tool used for
-    **configuration management,
-    application deployment, and
-    task automation.**
-- **Advantages:**
-  - Agentless architecture.
-  - Uses SSH for communication.
-  - Simple, YAML-based playbooks.
-  - Idempotent operations.
-  - Large community and extensive documentation.
-- **Why use Ansible?**
-  - Simplifies automation.
-  - Ensures consistency across environments.
-  - Facilitates infrastructure as code (IaC) practices.
+In this session, we'll introduce you to the fundamental concepts of Terraform and Infrastructure as Code (IaC). Learn why Terraform is crucial for managing infrastructure and how IaC streamlines provisioning.
 
-#### Comparison with Shell and Python Scripting:
-- **Shell Scripting:**
-  - Limited error handling.
-  - Complex syntax for advanced tasks.
-- **Python Scripting:**
-  - Powerful and flexible but requires programming knowledge.
-- **Ansible:**
-  - Simplifies automation with YAML.
-  - Robust error handling.
-  - Extensive built-in modules.
+#### Installing Terraform on MacOS, Linux and Windows
 
-#### Installing Ansible:
-- **On macOS:**
-  ```sh
-  brew install ansible
-  ```
-- **On Ubuntu/Debian:**
-  ```sh
-  sudo apt update
-  sudo apt install ansible
-  ```
-- **On CentOS/RHEL:**
-  ```sh
-  sudo yum install epel-release
-  sudo yum install ansible
-  ```
+Get your hands dirty by installing Terraform on both MacOS, Linux and Windows. We'll guide you through the process with clear instructions and commands.
 
-#### IDE (VS Code) and Plugin Configuration:
-- **Install VS Code:**
-  - Download from [VS Code Website](https://code.visualstudio.com/).
-- **Install Ansible Plugin:**
-  - Search for "Ansible" in the VS Code Extensions Marketplace and install the plugin.
+#### Setting up Terraform for AWS
 
----
+Dive into AWS integration with Terraform. You'll learn how to set up your AWS credentials and configure the AWS provider within Terraform to start provisioning resources.
 
-### Day 2: Ansible Adhoc Commands
+#### Writing Your First Terraform Code
 
-#### Passwordless Authentication:
-- **SSH Key Generation:**
-  ```sh
-  ssh-keygen -t rsa -b 4096
-  ssh-copy-id user@hostname
-  ```
+Start writing actual Terraform code with a simple example. Learn about the basic structure of a Terraform configuration file and how to define resources using the HCL language.
 
-#### Ansible Inventory:
-- **Inventory File:**
-  ```ini
-  [webservers]
-  server1 ansible_host=192.168.1.1
-  server2 ansible_host=192.168.1.2
-  ```
+### Terraform Lifecycle
 
-#### Understanding Adhoc Commands:
-- **Basic Usage:**
-  ```sh
-  ansible all -m ping
-  ```
+Understand the lifecycle of terraform. What is terraform `init`, `plan` and `apply`.
 
-#### Examples of Common Adhoc Commands:
-- **Check Disk Space:**
-  ```sh
-  ansible all -m shell -a "df -h"
-  ```
-- **Install a Package:**
-  ```sh
-  ansible webservers -m apt -a "name=apache2 state=present"
-  ```
+#### Launching an EC2 Instance
 
-#### Exploring the Power of Adhoc Commands:
-- **Quick System Management Tasks:**
-  ```sh
-  ansible webservers -a "/sbin/reboot"
-  ```
+Take your skills up a notch by provisioning an EC2 instance on AWS using Terraform. Explore attributes like instance type, AMI, and tags to customize your instance.
 
----
+#### Terraform State Basics
 
-### Day 3: Writing Your First Ansible Playbook
+Understand the importance of Terraform state files. Learn about desired and current states, and how Terraform manages these states to ensure infrastructure consistency.
 
-#### Understanding YAML Basics:
-- **YAML Syntax:**
-  ```yaml
-  ---
-  - name: Example Playbook
-    hosts: all
-    tasks:
-      - name: Ensure Apache is installed
-        apt:
-          name: apache2
-          state: present
-  ```
+## Day 2: Advanced Terraform Configuration
 
-#### Ansible Playbook Structure:
-- **Components:**
-  - **Playbook:** The YAML file defining automation tasks.
-  - **Play:** A group of tasks executed on specified hosts.
-  - **Module:** Predefined functions (like `apt`, `shell`, etc.).
-  - **Task:** Individual actions in a play.
-  - **Collection:** Packages of roles and plugins.
+#### Understanding Providers and Resources
 
-#### Hands-on: Writing a Playbook:
-- **Example Playbook:**
-  ```yaml
-  ---
-  - name: Install Apache and Deploy App
-    hosts: webservers
-    become: yes
-    tasks:
-      - name: Install Apache
-        apt:
-          name: apache2
-          state: present
+Deepen your knowledge of providers and resources. Explore the role of different providers for various cloud platforms and understand how resources define infrastructure components.
 
-      - name: Copy Static Website
-        copy:
-          src: /path/to/static/site
-          dest: /var/www/html
-  ```
+#### Variables and Outputs in Terraform
 
----
+Discover the power of variables for dynamic configurations. Learn how to define, declare, and utilize variables effectively. Explore outputs to retrieve and display essential information.
 
-### Day 4: Understanding Ansible Roles
+#### Conditional Expressions and Functions
 
-#### What are Ansible Roles?
-- **Purpose:**
-  - Roles help in organizing playbooks into reusable components.
+Elevate your configurations with conditional expressions, adding logic to your code. We'll introduce you to Terraform's built-in functions for tasks like string manipulation and calculations.
 
-#### Exploring Folder Structure:
-- **Role Directory Structure:**
-  ```plaintext
-  roles/
-    └── role_name/
-        ├── tasks/
-        ├── handlers/
-        ├── files/
-        ├── templates/
-        ├── vars/
-        ├── defaults/
-        ├── meta/
-  ```
+#### Debugging and Formatting Terraform Files
 
-#### Comparing Roles with Playbooks:
-- **Advantages:**
-  - Modularization.
-  - Reusability.
-  - Improved readability and maintainability.
+Master the art of debugging Terraform configurations.Plus, learn why proper formatting with terraform fmt is crucial.
 
-#### Hands-on: Creating a Role:
-- **Create Role:**
-  ```sh
-  ansible-galaxy init myrole
-  ```
+## Day 3: Building Reusable Infrastructure with Modules
 
----
+#### Creating Modular Infrastructure with Terraform Modules
 
-### Day 5: Deep Dive into Ansible Roles with Demo
+Unlock the potential of reusability with Terraform modules. Understand how modules enable you to create shareable and organized infrastructure components.
 
-#### Ansible Galaxy:
-- **Exploring Pre-built Roles:**
-  - Visit [Ansible Galaxy](https://galaxy.ansible.com/) to find roles.
+#### Local Values and Data Sources
 
-#### Importing and Installing Roles:
-- **Install Role:**
-  ```sh
-  ansible-galaxy install username.rolename
-  ```
+Simplify complex expressions using local values. Dive into data sources and learn how to fetch data from existing resources or external systems, enhancing your configurations' flexibility.
 
-#### DEMO: Advanced Usage of Roles:
-- **Example Project Structure:**
-  ```plaintext
-  site.yml
-  roles/
-    └── webserver/
-        ├── tasks/
-        ├── handlers/
-        ├── files/
-        ├── templates/
-        ├── vars/
-        ├── defaults/
-        ├── meta/
-  ```
+#### Using Variables and Inputs with Modules
 
-#### Best Practices for Organizing Roles:
-- **Structure:**
-  - Keep roles focused and minimal.
-  - Use meaningful names.
-  - Document roles and tasks.
+Explore the versatility of using variables within modules to customize their behavior. Learn how inputs work within modules and the benefits they offer.
 
----
+#### Leveraging Outputs from Modules
 
-### Day 6: Ansible Variables and Precedence
+Utilize module outputs to access critical information or propagate data to your root configuration. Learn how to make your modules more informative and useful.
 
-#### Create AWS Resources using Ansible:
-- **Using Collections:**
-  ```yaml
-  ---
-  - name: Create AWS EC2 Instance
-    hosts: localhost
-    gather_facts: False
-    tasks:
-      - name: Launch EC2 instance
-        amazon.aws.ec2:
-          instance_type: t2.micro
-          image_id: ami-0abcdef1234567890
-          count: 1
-          region: us-west-2
-          key_name: mykey
-  ```
+#### Exploring Terraform Registry for Modules
 
-#### Understanding Ansible Variables:
-- **Scope:**
-  - **Global:** Defined in `/etc/ansible/ansible.cfg`.
-  - **Playbook:** Defined in playbooks.
-  - **Role:** Defined within roles.
+Embark on a journey through the Terraform Registry. Discover pre-built, community-contributed modules and learn how to incorporate them into your own configurations.
 
-#### Jinja2 Templating:
-- **Using Templating:**
-  ```yaml
-  tasks:
-    - name: Create a configuration file
-      template:
-        src: template.j2
-        dest: /etc/myapp/config
-  ```
+## Day 4: Collaboration and State Management
 
-#### Variable Precedence:
-- **Order of Precedence:**
-  - Command-line variables.
-  - Role defaults.
-  - Inventory variables.
-  - Playbook variables.
-  - Role variables.
+#### Collaborating with Git and Version Control
 
-#### Hands-on: Using Variables:
-- **Example:**
-  ```yaml
-  ---
-  - name: Using Variables
-    hosts: all
-    vars:
-      package_name: "nginx"
-    tasks:
-      - name: Install a package
-        apt:
-          name: "{{ package_name }}"
-          state: present
-  ```
+Collaborate effectively using Git and version control. Grasp fundamental Git commands such as cloning, pulling, and pushing repositories to enhance teamwork.
 
----
+#### Handling Sensitive Data and .gitignore
 
-### Day 7: Ansible Conditionals and Loops
+Tackle security challenges associated with sensitive data in version control. Explore the importance of .gitignore to exclude sensitive files from being committed.
 
-#### Using Conditionals:
-- **Example Conditional Task:**
-  ```yaml
-  - name: Install Apache on Debian
-    apt:
-      name: apache2
-      state: present
-    when: ansible_os_family == "Debian"
-  ```
+#### Introduction to Terraform Backends
 
-#### Implementing Loops:
-- **Example Loop:**
-  ```yaml
-  - name: Create multiple users
-    user:
-      name: "{{ item }}"
-      state: present
-    loop:
-      - user1
-      - user2
-      - user3
-  ```
+Uncover the role of Terraform backends in remote state storage. Learn why they're essential for maintaining infrastructure state and configurations.
 
-#### Practical Examples:
-- **Conditional and Loop Combined:**
-  ```yaml
-  - name: Ensure users exist on Debian
-    user:
-      name: "{{ item }}"
-      state: present
-    when: ansible_os_family == "Debian"
-    loop:
-      - user1
-      - user2
-      - user3
-  ```
+#### Implementing S3 Backend for State Storage
 
----
+Get hands-on experience configuring an S3 bucket as a backend for remote state storage. Understand how this setup improves collaboration and state management.
 
-### Day 8: Error Handling in Ansible
+#### State Locking with DynamoDB
 
-#### Dealing with Errors:
-- **Ignore Errors:**
-  ```yaml
-  - name: Ignore errors during command execution
-    command: /bin/false
-    ignore_errors: yes
-  ```
+Dive into state locking and the prevention of concurrent updates. Implement state locking using DynamoDB as a backend mechanism, ensuring state consistency.
 
-#### Error Handling Techniques:
-- **Retries and Delay:**
-  ```yaml
-  - name: Retry a task
-    command: /bin/false
-    register: result
-    retries: 5
-    delay: 10
-    until: result.rc == 0
-  ```
+## Day 5: Provisioning and Provisioners
 
-#### Practical Scenarios:
-- **Fail Task on Condition:**
-  ```yaml
-  - name: Fail if condition is met
-    fail:
-      msg: "Stopping the playbook execution."
-    when: some_condition is true
-  ```
+#### Understanding Provisioners in Terraform
 
----
+Learn about provisioners, mechanisms for executing actions on resources during creation and destruction. Understand how they facilitate customization.
 
-### Day 9: Ansible Vault for Security
+#### Remote-exec and Local-exec Provisioners
 
-#### Understanding Ansible Vault:
-- **Purpose:**
-  - Secure sensitive data like passwords and keys.
+Differentiate between remote-exec and local-exec provisioners. Explore how remote-exec provisions actions on remote servers, while local-exec performs tasks locally.
 
-#### Encrypting and Decrypting Files:
-- **Encrypt a File:**
-  ```sh
-  ansible-vault encrypt secrets.yml
-  ```
-- **Decrypt a File:**
-  ```sh
-  ansible-vault decrypt secrets.yml
-  ```
+#### Applying Provisioners at Creation and Destruction 
 
-#### Best Practices:
-- **Managing Secrets:**
-  - Use Ansible Vault for all sensitive information.
-  - Store vault passwords securely.
+Discover when to use provisioners during resource creation or destruction. Configure provisioners within resource blocks to execute specific actions.
 
----
+#### Failure Handling for Provisioners
 
-### Day 10: Policy as Code
+Gain insights into handling provisioner failures. Learn about retry mechanisms, timeouts, and the on_failure attribute to control provisioner behavior on failure.
 
-#### Introduction:
-- **Concept:**
-  - Policy as Code is the practice of writing and enforcing
+## Day 6: Managing Environments with Workspaces
+
+#### Introduction to Terraform Workspaces
+
+Understand the concept of workspaces and their role in managing different environments. Learn how workspaces aid in isolating configurations.
+
+#### Creating and Switching Between Workspaces
+
+Learn how to create new workspaces and switch between them using terraform workspace commands. Understand their significance in environment management.
+
+#### Using Workspaces for Environment Management
+
+Learn deeper into how workspaces streamline environment management. Comprehend their benefits in maintaining separate state files for various settings.
+
+## Day 7: Security and Advanced Topics
+
+#### HashiCorp Vault Overview
+
+Gain an overview of HashiCorp Vault, a powerful tool for secret management and data protection. Understand its significance in maintaining secure configurations.
+
+#### Integrating Terraform with Vault for Secrets
+
+Learn how to integrate Terraform with Vault to manage sensitive data securely. Discover how Vault can be used to store and distribute secrets within configurations.
