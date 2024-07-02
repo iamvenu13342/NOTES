@@ -1,135 +1,78 @@
- <h1>Terraform</h1>
+<h1> Ansible</h1>
 
-## Day 1: Getting Started with Terraform
+Day 1: Introduction to Ansible and Getting Started
 
-#### Introduction to Terraform and IaC
+- Overview of Ansible: What is Ansible, its advantages, and why use it?
+- Comparison with Shell and Python scripting for automation.
+- Installing Ansible on different platforms.
+- IDE(VS Code) and Plugin configuration.
 
-In this session, we'll introduce you to the fundamental concepts of Terraform and Infrastructure as Code (IaC). Learn why Terraform is crucial for managing infrastructure and how IaC streamlines provisioning.
+Day 2: Ansible Adhoc Commands
 
-#### Installing Terraform on MacOS, Linux and Windows
+- Passwordless Authentication
+- Ansible Inventory 
+- Understanding Adhoc commands and their usage.
+- Examples of common Adhoc commands for system management tasks.
+- Exploring the power of Adhoc commands for quick tasks.
 
-Get your hands dirty by installing Terraform on both MacOS, Linux and Windows. We'll guide you through the process with clear instructions and commands.
+Day 3: Writing Your First Ansible Playbook
 
-#### Setting up Terraform for AWS
+- Understanding YAML basics and Ansible playbook structure.
+- Introduction to Ansible structure: Playbook, Play, Modules, Tasks and Collections.
+- Hands-on: Writing a playbook to install apache2 and deploy a static app on aws.
 
-Dive into AWS integration with Terraform. You'll learn how to set up your AWS credentials and configure the AWS provider within Terraform to start provisioning resources.
+Day 4: Understanding Ansible Roles
 
-#### Writing Your First Terraform Code
+- What are Ansible roles and why use them?
+- Exploring the folder structure of Ansible roles.
+- Comparing roles with playbooks and understanding their advantages.
+- Hands-on: Creating a simple role and using it in a playbook.
 
-Start writing actual Terraform code with a simple example. Learn about the basic structure of a Terraform configuration file and how to define resources using the HCL language.
+Day 5: Deep Dive into Ansible Roles with Demo
 
-### Terraform Lifecycle
+- Ansible Galaxy - Exploring pre-built Ansible roles.
+- Ansible Galaxy - Importing and Installing roles.
+- DEMO: Advanced usage of Ansible roles with a practical example project.
+- Best practices for organizing roles and playbook structure.
 
-Understand the lifecycle of terraform. What is terraform `init`, `plan` and `apply`.
+Day 6: Ansible Variables and Precedence
 
-#### Launching an EC2 Instance
+- Create AWS Resources using Ansible (Collections)
+- Understanding Ansible variables and their scope with an example
+- Jinja2 Templating - Utilizing advanced templating features
+- Variable precedence: How Ansible resolves conflicts between different variable sources.
+- Hands-on: Using variables in playbooks and roles.
 
-Take your skills up a notch by provisioning an EC2 instance on AWS using Terraform. Explore attributes like instance type, AMI, and tags to customize your instance.
+Day 7: Ansible Conditionals and Loops
 
-#### Terraform State Basics
+- Using conditionals in Ansible to control task execution.
+- Implementing loops for repetitive tasks.
+- Practical examples of conditionals and loops in playbooks.
 
-Understand the importance of Terraform state files. Learn about desired and current states, and how Terraform manages these states to ensure infrastructure consistency.
+Day 8: Error Handling in Ansible
 
-## Day 2: Advanced Terraform Configuration
+- Dealing with errors and failures in Ansible playbooks.
+- Error handling techniques and best practices.
+- Demonstrating error handling in practical scenarios.
 
-#### Understanding Providers and Resources
+Day 9: Ansible Vault for Security
 
-Deepen your knowledge of providers and resources. Explore the role of different providers for various cloud platforms and understand how resources define infrastructure components.
+- Understanding Ansible Vault and its role in securing sensitive data.
+- Encrypting and decrypting files using Ansible Vault.
+- Best practices for managing secrets and sensitive data in Ansible.
 
-#### Variables and Outputs in Terraform
+Day 10: Policy as Code
 
-Discover the power of variables for dynamic configurations. Learn how to define, declare, and utilize variables effectively. Explore outputs to retrieve and display essential information.
+Day 11: Network Automation using Ansible
 
-#### Conditional Expressions and Functions
+Day 12: Ansible Tower Deep Dive
 
-Elevate your configurations with conditional expressions, adding logic to your code. We'll introduce you to Terraform's built-in functions for tasks like string manipulation and calculations.
+- Understanding Ansible Tower
+- Comparision with Ansible command line and adhoc commands
+- RBAC and Security with Ansible Tower
 
-#### Debugging and Formatting Terraform Files
+Day 13: Advanced Ansible Project
 
-Master the art of debugging Terraform configurations.Plus, learn why proper formatting with terraform fmt is crucial.
+- Terraform + Ansible Project
 
-## Day 3: Building Reusable Infrastructure with Modules
-
-#### Creating Modular Infrastructure with Terraform Modules
-
-Unlock the potential of reusability with Terraform modules. Understand how modules enable you to create shareable and organized infrastructure components.
-
-#### Local Values and Data Sources
-
-Simplify complex expressions using local values. Dive into data sources and learn how to fetch data from existing resources or external systems, enhancing your configurations' flexibility.
-
-#### Using Variables and Inputs with Modules
-
-Explore the versatility of using variables within modules to customize their behavior. Learn how inputs work within modules and the benefits they offer.
-
-#### Leveraging Outputs from Modules
-
-Utilize module outputs to access critical information or propagate data to your root configuration. Learn how to make your modules more informative and useful.
-
-#### Exploring Terraform Registry for Modules
-
-Embark on a journey through the Terraform Registry. Discover pre-built, community-contributed modules and learn how to incorporate them into your own configurations.
-
-## Day 4: Collaboration and State Management
-
-#### Collaborating with Git and Version Control
-
-Collaborate effectively using Git and version control. Grasp fundamental Git commands such as cloning, pulling, and pushing repositories to enhance teamwork.
-
-#### Handling Sensitive Data and .gitignore
-
-Tackle security challenges associated with sensitive data in version control. Explore the importance of .gitignore to exclude sensitive files from being committed.
-
-#### Introduction to Terraform Backends
-
-Uncover the role of Terraform backends in remote state storage. Learn why they're essential for maintaining infrastructure state and configurations.
-
-#### Implementing S3 Backend for State Storage
-
-Get hands-on experience configuring an S3 bucket as a backend for remote state storage. Understand how this setup improves collaboration and state management.
-
-#### State Locking with DynamoDB
-
-Dive into state locking and the prevention of concurrent updates. Implement state locking using DynamoDB as a backend mechanism, ensuring state consistency.
-
-## Day 5: Provisioning and Provisioners
-
-#### Understanding Provisioners in Terraform
-
-Learn about provisioners, mechanisms for executing actions on resources during creation and destruction. Understand how they facilitate customization.
-
-#### Remote-exec and Local-exec Provisioners
-
-Differentiate between remote-exec and local-exec provisioners. Explore how remote-exec provisions actions on remote servers, while local-exec performs tasks locally.
-
-#### Applying Provisioners at Creation and Destruction 
-
-Discover when to use provisioners during resource creation or destruction. Configure provisioners within resource blocks to execute specific actions.
-
-#### Failure Handling for Provisioners
-
-Gain insights into handling provisioner failures. Learn about retry mechanisms, timeouts, and the on_failure attribute to control provisioner behavior on failure.
-
-## Day 6: Managing Environments with Workspaces
-
-#### Introduction to Terraform Workspaces
-
-Understand the concept of workspaces and their role in managing different environments. Learn how workspaces aid in isolating configurations.
-
-#### Creating and Switching Between Workspaces
-
-Learn how to create new workspaces and switch between them using terraform workspace commands. Understand their significance in environment management.
-
-#### Using Workspaces for Environment Management
-
-Learn deeper into how workspaces streamline environment management. Comprehend their benefits in maintaining separate state files for various settings.
-
-## Day 7: Security and Advanced Topics
-
-#### HashiCorp Vault Overview
-
-Gain an overview of HashiCorp Vault, a powerful tool for secret management and data protection. Understand its significance in maintaining secure configurations.
-
-#### Integrating Terraform with Vault for Secrets
-
-Learn how to integrate Terraform with Vault to manage sensitive data securely. Discover how Vault can be used to store and distribute secrets within configurations.
+Day 14: Ansible Interview Questions
