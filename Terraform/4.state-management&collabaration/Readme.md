@@ -130,4 +130,4 @@ State locking prevents multiple users from making concurrent changes to the stat
 
 ### Summary
 
-On Day 4, you have learned to collaborate effectively using Git and handle sensitive data securely in Terraform projects. You explored Terraform backends and configured an S3 bucket for remote state storage, enhancing collaboration and state management. Additionally, you implemented state locking with DynamoDB to prevent concurrent updates, ensuring consistency. These practices are essential for managing Terraform infrastructure in a collaborative environment.
+ you have learned to collaborate effectively using Git and handle sensitive data securely in Terraform projects. You explored Terraform backends and configured an S3 bucket for remote state storage, enhancing collaboration and state management. Additionally, you implemented state locking with DynamoDB to prevent concurrent updates, ensuring consistency. These practices are essential for managing Terraform infrastructure in a collaborative environment.
