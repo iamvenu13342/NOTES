@@ -243,6 +243,6 @@ terraform {
 
 ## Summary
 
-On Day 1, you have learned about the Terraform lifecycle stages (`init`, `plan`, and `apply`), how to launch an EC2 instance using Terraform, and the basics of managing Terraform state files. This knowledge is fundamental for using Terraform effectively to manage your infrastructure.
+ you have learned about the Terraform lifecycle stages (`init`, `plan`, and `apply`), how to launch an EC2 instance using Terraform, and the basics of managing Terraform state files. This knowledge is fundamental for using Terraform effectively to manage your infrastructure.
 
 you've been introduced to Terraform and the concept of Infrastructure as Code (IaC). You've installed Terraform on different operating systems, set up Terraform to work with AWS, and written your first Terraform code to provision an S3 bucket. This foundational knowledge will help you manage and scale your infrastructure efficiently using Terraform.
