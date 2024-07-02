@@ -193,4 +193,4 @@ Proper formatting ensures that Terraform configurations are easy to read and mai
 
 ### Summary
 
-On Day 2, you have advanced your Terraform knowledge by exploring providers and resources, learning how to use variables and outputs for dynamic configurations, applying conditional expressions and built-in functions, and mastering debugging and formatting. This knowledge will enable you to create more sophisticated and maintainable Terraform configurations.
+ you have advanced your Terraform knowledge by exploring providers and resources, learning how to use variables and outputs for dynamic configurations, applying conditional expressions and built-in functions, and mastering debugging and formatting. This knowledge will enable you to create more sophisticated and maintainable Terraform configurations.
