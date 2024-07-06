@@ -166,7 +166,7 @@ YAML is a versatile and readable format suitable for a variety of applications, 
 
 
 
-<h1> comprehensive YAML file that includes configurations for Pods, ReplicaSets, Deployments, Services, and ConfigMaps. This example sets up a simple web application using NGINX.</h1>
+<h1> Comprehensive YAML file that includes configurations for Pods, ReplicaSets, Deployments, Services, and ConfigMaps. This example sets up a simple web application using NGINX.</h1>
 
 ### YAML File
 
