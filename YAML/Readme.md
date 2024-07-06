@@ -184,7 +184,7 @@ data:
   APP_COLOR: blue
   APP_MESSAGE: "Welcome to the application!"
 
-# Pod configuration
+**Pod configuration**
 apiVersion: v1
 kind: Pod
 metadata:
