@@ -1,3 +1,4 @@
+<h1>ReplicaSets and ReplicationControllers </h1>
 ReplicaSets and ReplicationControllers are both Kubernetes objects used to manage the lifecycle of Pods and ensure a specified number of replicas are running. However, there are important differences between them, particularly in terms of features and use cases. Here’s a detailed comparison:
 
 ### ReplicationController
