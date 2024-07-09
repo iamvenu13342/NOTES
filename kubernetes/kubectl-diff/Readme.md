@@ -1,4 +1,4 @@
-<h1>differences between `kubectl create`Pods, ReplicaSets, or Deployments</h1>
+<h1>Differences between `kubectl create`Pods, ReplicaSets, or Deployments</h1>
 The `kubectl create` command in Kubernetes is used to create different resources within a cluster. The resources can be Pods, ReplicaSets, or Deployments, each serving different purposes. Here's an explanation of the differences between creating these resources:
 
 ### 1. `kubectl create pod`
