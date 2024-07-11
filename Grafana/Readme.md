@@ -1,14 +1,14 @@
 <h1>Grafana Definition</h1>
 
 Grafana is an open-source analytics and monitoring platform used to visualize time series data. It supports a variety of data sources, including Prometheus, Elasticsearch, InfluxDB, and many others, allowing users to create dynamic and interactive dashboards.
-
+----
 ### Overview
 - **Data Sources:** Grafana supports multiple data sources, enabling you to pull in data from various monitoring and logging tools.
 - **Dashboards:** Grafana allows the creation of customizable dashboards to visualize data using various chart types and panels.
 - **Alerting:** Grafana includes alerting features that enable users to define alert rules and receive notifications via various channels.
 - **Plugins:** Grafana has a rich ecosystem of plugins for data sources, panels, and apps, extending its functionality.
 - **User Management:** Grafana provides user authentication, permissions, and team management to control access to dashboards and data.
-
+----
 ### Usage
 1. **Data Visualization:** Create interactive and visually appealing dashboards to display metrics and logs from different data sources.
 2. **Alerting:** Set up alerts based on specific conditions in your metrics, and receive notifications through email, Slack, PagerDuty, etc.
