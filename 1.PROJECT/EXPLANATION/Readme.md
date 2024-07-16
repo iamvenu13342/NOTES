@@ -1,6 +1,6 @@
 <H1>E-commerce application</H1>
 
-<H2>AWS services</H2>
+<H1>AWS services</H1>
 Deploying an e-commerce application on AWS typically involves using a variety of AWS services to ensure scalability, security, availability, and performance. Here’s a detailed list of commonly used AWS services for deploying an e-commerce application, along with their roles:
 
 ### Core Services
@@ -124,7 +124,7 @@ Deploying an e-commerce application on AWS typically involves using a variety of
 
 This combination of AWS services creates a robust, scalable, and secure environment for deploying and managing an e-commerce application.
 
-<H2>Terraform</H2>
+<H1>Terraform</H1>
 
 When deploying an e-commerce application, Terraform can be used extensively to automate and manage the infrastructure. Terraform, being an Infrastructure as Code (IaC) tool, allows you to define and provision data center infrastructure using a declarative configuration language. Here's a detailed explanation of how and to what extent Terraform can be used in deploying an e-commerce application:
 
@@ -385,7 +385,7 @@ Implementing Terraform as part of your e-commerce application deployment strateg
 
 
 
-<H2>Git and GitHub</H2>
+<H1>Git and GitHub</H1>
 Git and GitHub play a crucial role in the development, collaboration, version control, and continuous integration/continuous deployment (CI/CD) processes of deploying an e-commerce application. Here’s how Git and GitHub are used throughout the deployment pipeline:
 
 ### Development and Collaboration
@@ -448,7 +448,7 @@ Git and GitHub play a crucial role in the development, collaboration, version co
 
 In summary, Git and GitHub are fundamental to managing the source code, facilitating collaboration, integrating with CI/CD tools, and ensuring a smooth and controlled deployment process for the e-commerce application. They provide the backbone for version control, code reviews, continuous integration, and continuous deployment, ensuring high-quality and reliable software delivery.
 
-<H2>Jenkins</H2>
+<H1>Jenkins</H1>
 
 When deploying an e-commerce application, Jenkins is a critical part of the Continuous Integration and Continuous Deployment (CI/CD) pipeline. Here's an in-depth look at how Jenkins is used throughout the deployment process:
 
@@ -607,7 +607,7 @@ Jenkins is used extensively in the deployment of an e-commerce application, cove
 This comprehensive integration of Jenkins in the CI/CD pipeline ensures efficient, reliable, and secure deployment of the e-commerce application.
 
 
-<H2>Ansible</H2>
+<H1>Ansible</H1>
 Ansible can be extensively used in deploying an e-commerce application to automate various aspects of system configuration, application deployment, and orchestration. Here’s a detailed look at how and to what extent Ansible can be used in such a deployment:
 
 ### Extent of Using Ansible in E-commerce Application Deployment
@@ -840,7 +840,7 @@ By using Ansible extensively in the deployment of an e-commerce application, you
 Implementing Ansible as part of your e-commerce application deployment strategy provides a powerful and flexible automation framework, enabling efficient and consistent management of your infrastructure and application deployments.
 
 
-<H2>Docker and DockerHub</H2>
+<H1>Docker and DockerHub</H1>
 When deploying an e-commerce application, Docker and DockerHub play significant roles in containerization, image management, and deployment. Here’s a detailed look at how Docker and DockerHub are utilized throughout the deployment process:
 
 ### Containerization with Docker
@@ -920,7 +920,7 @@ Docker and DockerHub are extensively used in deploying an e-commerce application
 
 This approach ensures that the e-commerce application is efficiently developed, tested, and deployed, with high consistency and reliability across different environments.
 
-<H2>Kubernetes</H2>
+<H1>Kubernetes</H1>
 
 When deploying an e-commerce application, Kubernetes plays a crucial role in managing, orchestrating, and scaling the application's containerized services. Here’s an in-depth look at how Kubernetes is utilized throughout the deployment process:
 
@@ -1051,7 +1051,7 @@ Kubernetes is used extensively in deploying an e-commerce application, providing
 
 This approach ensures that the e-commerce application is resilient, scalable, and maintainable, capable of handling production workloads with efficiency and reliability.
 
-<H2>Kubernetes Tools</H2>
+<H1>Kubernetes Tools</H1>
 In the context of deploying an e-commerce application on Kubernetes, using tools like Prometheus, Grafana, Nagios, Helm, Elasticsearch, and the ELK Stack can significantly enhance monitoring, management, and deployment processes. Here's how and when to use each of these tools:
 
 ### Prometheus and Grafana
