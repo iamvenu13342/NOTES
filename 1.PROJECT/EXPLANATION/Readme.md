@@ -840,7 +840,7 @@ By using Ansible extensively in the deployment of an e-commerce application, you
 Implementing Ansible as part of your e-commerce application deployment strategy provides a powerful and flexible automation framework, enabling efficient and consistent management of your infrastructure and application deployments.
 
 
-<H1>Docker and DockerHub</H1>
+<H2>Docker and DockerHub</H2>
 When deploying an e-commerce application, Docker and DockerHub play significant roles in containerization, image management, and deployment. Here’s a detailed look at how Docker and DockerHub are utilized throughout the deployment process:
 
 ### Containerization with Docker
