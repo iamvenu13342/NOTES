@@ -926,30 +926,30 @@ When deploying an e-commerce application, Kubernetes plays a crucial role in man
 
 ### Key Uses of Kubernetes in E-commerce Application Deployment
 
-1. **Container Orchestration**:
+### 1.Container Orchestration:
    - **Deployment Management**: Kubernetes handles the deployment of Docker containers across a cluster of nodes. It manages the desired state, ensuring that the specified number of replicas of each container is running.
    - **Service Discovery and Load Balancing**: Kubernetes provides built-in service discovery and load balancing, ensuring that traffic is evenly distributed across the available pods.
 
-2. **Scaling**:
+### 2. Scaling:
    - **Horizontal Pod Autoscaling**: Kubernetes can automatically scale the number of pod replicas up or down based on CPU utilization or other custom metrics.
    - **Cluster Autoscaling**: Kubernetes can also scale the number of nodes in the cluster based on the resource demands of the pods.
 
-3. **Configuration Management**:
+### 3.Configuration Management:
    - **ConfigMaps and Secrets**: Kubernetes allows the management of configuration data and secrets separately from the application code. ConfigMaps are used for non-sensitive data, and Secrets are used for sensitive data such as passwords and API keys.
 
-4. **Storage Management**:
+### 4.Storage Management:
    - **Persistent Volumes (PV) and Persistent Volume Claims (PVC)**: Kubernetes provides abstractions for managing persistent storage. PVs are a piece of storage in the cluster, and PVCs are requests for storage by users.
    - **Dynamic Provisioning**: Kubernetes can automatically provision storage resources as needed using StorageClasses.
 
-5. **Deployment Strategies**:
+### 5.Deployment Strategies:
    - **Rolling Updates**: Kubernetes supports rolling updates, allowing you to update the application without downtime by gradually replacing old pods with new ones.
    - **Blue-Green and Canary Deployments**: More advanced deployment strategies can be implemented to ensure zero downtime and to test new features on a subset of users before full deployment.
 
-6. **Networking**:
+### 6.Networking:
    - **Intra-cluster Networking**: Kubernetes manages the network communication between different services within the cluster using built-in networking plugins.
    - **Ingress Controllers**: Kubernetes Ingress resources and controllers manage external access to the services in the cluster, providing load balancing, SSL termination, and name-based virtual hosting.
 
-7. **Monitoring and Logging**:
+### 7.Monitoring and Logging:
    - **Integrated Monitoring**: Tools like Prometheus and Grafana are often integrated with Kubernetes to monitor cluster health and application performance.
    - **Centralized Logging**: Tools like Elasticsearch, Fluentd, and Kibana (EFK stack) can be used to collect, aggregate, and visualize logs from different containers.
 
