@@ -23,13 +23,13 @@ Deploying an e-commerce application on AWS typically involves using a variety of
 
 ### Networking and Security
 
-5. **Amazon VPC (Virtual Private Cloud)**
-   - **Purpose**: Isolated network for your AWS resources.
-   - **Use Case**: Providing network isolation and segmentation for different parts of the application.
-
-6. **AWS IAM (Identity and Access Management)**
+5.  **AWS IAM (Identity and Access Management)**
    - **Purpose**: Manage user access and encryption keys.
    - **Use Case**: Controlling access to AWS services and resources securely.
+
+6. **Amazon VPC (Virtual Private Cloud)**
+   - **Purpose**: Isolated network for your AWS resources.
+   - **Use Case**: Providing network isolation and segmentation for different parts of the application.
 
 7. **AWS Security Groups**
    - **Purpose**: Acts as a virtual firewall to control inbound and outbound traffic.
