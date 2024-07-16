@@ -252,35 +252,60 @@ resource "aws_iam_role_policy_attachment" "ecs_task_execution_role_policy" {
    - **Automated Deployments**: Use Terraform within CI/CD pipelines (e.g., Jenkins, GitHub Actions, GitLab CI) to automate infrastructure deployments and updates.
    - **State Management**: Use remote state backends (e.g., S3, Terraform Cloud) to manage and share Terraform state files.
 
-Example GitHub Actions Workflow:
-```yaml
-name: Terraform
+ **EXAMPLE FOR JENKINS WORKFLOW**
+ 
+pipeline {
+    agent {
+        label 'ubuntu-latest'
+    }
 
-on:
-  push:
-    branches:
-      - main
+    environment {
+        TF_VERSION = '1.0.0' // Specify the desired Terraform version
+    }
 
-jobs:
-  terraform:
-    runs-on: ubuntu-latest
+    stages {
+        stage('Checkout Code') {
+            steps {
+                checkout scm
+            }
+        }
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+        stage('Set Up Terraform') {
+            steps {
+                script {
+                    def tf_install_script = '''
+                    #!/bin/bash
+                    set -e
+                    wget https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip
+                    unzip terraform_${TF_VERSION}_linux_amd64.zip
+                    sudo mv terraform /usr/local/bin/
+                    terraform --version
+                    '''
+                    sh tf_install_script
+                }
+            }
+        }
 
-    - name: Set up Terraform
-      uses: hashicorp/setup-terraform@v1
+        stage('Terraform Init') {
+            steps {
+                sh 'terraform init'
+            }
+        }
 
-    - name: Terraform Init
-      run: terraform init
+        stage('Terraform Plan') {
+            steps {
+                sh 'terraform plan'
+            }
+        }
 
-    - name: Terraform Plan
-      run: terraform plan
+        stage('Terraform Apply') {
+            steps {
+                sh 'terraform apply -auto-approve'
+            }
+        }
+    }
+}
 
-    - name: Terraform Apply
-      run: terraform apply -auto-approve
-```
 
 #### 6. **Application and Microservices Deployment**
    - **Kubernetes Resources**: Define and manage Kubernetes resources (e.g., Deployments, Services, Ingress) using Terraform’s Kubernetes provider.
