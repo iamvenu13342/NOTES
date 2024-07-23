@@ -32,6 +32,10 @@ GitFlow is a branching model for Git, proposed by Vincent Driessen. It is well-s
 4. After final testing, merge the release branch into `master` and `develop`.
 5. If urgent fixes are needed, create hotfix branches from `master`.
 
+#### GitHub
+GitHub is a web-based platform for version control and collaborative software development using Git. It enables developers to store code, track changes, and collaborate on projects with others efficiently.
+
+
 #### GitHub Flow
 
 GitHub Flow is a simpler workflow often used in continuous delivery environments, particularly for web applications.
